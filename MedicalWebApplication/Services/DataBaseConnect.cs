@@ -11,7 +11,7 @@ namespace MedicalWebApplication.Services
             this.connection = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;password=root;database=MedicalDB");
         }
 
-        public MySqlConnection SetConnection()
+        public MySqlConnection GetConnection()
         {
             return this.connection;
         }

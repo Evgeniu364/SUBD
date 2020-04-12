@@ -34,7 +34,7 @@ namespace MedicalWebApplication
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, Human human)
         {
-            
+            human.AuthorizationHuman("evgeniu_364", "12345");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
