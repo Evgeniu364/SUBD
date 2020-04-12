@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/boss/Documents/programming/6sem/SUBD/MedicalWebApplication/MedicalWebApplication/MedicalWebApplication.csproj": {}
+  },
+  "projects": {
+    "/Users/boss/Documents/programming/6sem/SUBD/MedicalWebApplication/MedicalWebApplication/MedicalWebApplication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/boss/Documents/programming/6sem/SUBD/MedicalWebApplication/MedicalWebApplication/MedicalWebApplication.csproj",
+        "projectName": "MedicalWebApplication",
+        "projectPath": "/Users/boss/Documents/programming/6sem/SUBD/MedicalWebApplication/MedicalWebApplication/MedicalWebApplication.csproj",
+        "packagesPath": "/Users/boss/.nuget/packages/",
+        "outputPath": "/Users/boss/Documents/programming/6sem/SUBD/MedicalWebApplication/MedicalWebApplication/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/boss/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
