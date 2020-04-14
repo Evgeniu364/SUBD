@@ -2,15 +2,14 @@ CREATE TRIGGER mydb.trigger_update
 before update ON mydb.human FOR EACH ROW 
 	INSERT INTO mydb.updatelog 
 	set
-    mydb.updatelog.Name1_idName1 = old.Name1_idName1,
-    mydb.updatelog.Name2_idName2 = old.Name2_idName2,
-    mydb.updatelog.Name3_idName3 = old.Name3_idName3,
+    mydb.updatelog.Name1_id = old.Name1_id,
+    mydb.updatelog.Name2_id = old.Name2_id,
+    mydb.updatelog.Name3_id = old.Name3_id,
     mydb.updatelog.login = old.login,
     mydb.updatelog.password = old.password,
     mydb.updatelog.role = old.role,
-    mydb.updatelog.status = old.status,
+    mydb.updatelog.active = old.active,
     mydb.updatelog.time = NOW(),
     mydb.updatelog.UpdateLogText = 'update',
-    mydb.updatelog.old_human_id = old.id,
-    mydb.updatelog.active = old.active
+    mydb.updatelog.old_human_id = old.id
     
