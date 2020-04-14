@@ -1,0 +1,4 @@
+CREATE TRIGGER mydb.trigger_delete
+before delete ON mydb.human FOR EACH ROW 
+	INSERT INTO mydb.deletelog 
+	set  mydb.deletelog.DeleteLogText = 'delete', mydb.deletelog.time = NOW(), mydb.deletelog.human_id = old.id;
