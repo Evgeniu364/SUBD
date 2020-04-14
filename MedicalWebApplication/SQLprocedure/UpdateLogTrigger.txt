@@ -13,3 +13,4 @@ before update ON mydb.human FOR EACH ROW
     mydb.updatelog.UpdateLogText = 'update',
     mydb.updatelog.old_human_id = old.id,
     mydb.updatelog.active = old.active
+    
