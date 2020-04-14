@@ -1,0 +1,4 @@
+CREATE TRIGGER mydb.after_insert_item
+AFTER INSERT ON mydb.human FOR EACH ROW
+INSERT INTO mydb.insertlog 
+set mydb.insertlog.time = NOW(), mydb.insertlog.InsertLogText = 'insert', mydb.insertlog.new_human_id = NEW.id;
