@@ -1,13 +1,13 @@
 DELIMITER // 
-    CREATE PROCEDURE mydb.proc_update(in id int,
+    CREATE PROCEDURE mydb.proc_update(
 									 IN fn varchar(100),
 									 IN ln varchar(100),
                                      IN pat varchar(100),
                                      IN log varchar(100),
-                                     IN pass varchar(100),
-                                     IN rol int,
-                                     IN act int)   
+                                     IN pass varchar(100)
+									)   
     BEGIN
+    declare is_id int;
     declare is_fn int;
     declare is_ln int;
     declare is_pat int;
@@ -38,15 +38,13 @@ DELIMITER //
 	set fin_fn = (select mydb.name1.id from mydb.name1 where mydb.name1.name1 = fn);
     set fin_ln = (select mydb.name2.id from mydb.name2 where mydb.name2.name2 = ln);
     set fin_pat = (select mydb.name3.id from mydb.name3 where mydb.name3.name3 = pat);
-    
+    set is_id = (select mydb.human.id from mydb.human where mydb.human.login = log);
 
         update mydb.human
         set mydb.human.Name1_id = fin_fn,
 			mydb.human.Name2_id = fin_ln,
             mydb.human.Name3_id = fin_pat,
             mydb.human.login = log,
-            mydb.human.password = pass, 
-            mydb.human.role = rol,
-            mydb.human.active = act
-		where mydb.human.id = id;
+            mydb.human.password = pass 
+		where mydb.human.id = is_id;
 END//
