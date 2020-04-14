@@ -28,13 +28,13 @@ namespace MedicalWebApplication
             
             services.AddControllersWithViews();
             services.AddSingleton<DataBaseConnect>();
-            services.AddTransient<Human>();
+            services.AddScoped<HumanServices>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, Human human)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, HumanServices humanServices)
         {
-            human.AuthorizationHuman("evgeniu_364", "12345");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

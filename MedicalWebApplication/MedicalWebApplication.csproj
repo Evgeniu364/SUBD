@@ -8,5 +8,9 @@
       <PackageReference Include="MySql.Data" Version="8.0.19" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Pages\Human\Login.cshtml" />
+    </ItemGroup>
+
 
 </Project>

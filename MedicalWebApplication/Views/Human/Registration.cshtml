@@ -1,0 +1,15 @@
+@using (Html.BeginForm("Registration", "Human", FormMethod.Post))
+{
+    <h4>Имя</h4>
+    <input type="text" name="firstname" /><br/>
+    <h4>Фамилия</h4>
+    <input type="text" name="lastname" /><br/>
+    <h4>Отчество</h4>
+    <input type="text" name="pat" /><br/>
+    <h4>Логин</h4>
+    <input type="text" name="login" /><br/>
+    <h4>Пароль</h4>
+    <input type="text" name="password" /><br/>
+    <button name="action" value="add">Зарегестрироваться</button>
+    
+}

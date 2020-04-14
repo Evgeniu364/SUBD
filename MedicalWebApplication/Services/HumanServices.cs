@@ -5,17 +5,14 @@ using MySql.Data.MySqlClient;
 
 namespace MedicalWebApplication.Services
 {
-    public class Human
+    public class HumanServices
     {
         private readonly MySqlConnection _connection;
-        private string authorizedHuman;
+        
 
-        public string GetAuthorizedHuman()
-        {
-            return this.authorizedHuman;
-        }
+        
 
-        public Human(DataBaseConnect connect)
+        public HumanServices(DataBaseConnect connect)
         {
             _connection = connect.GetConnection();
         }
@@ -27,7 +24,7 @@ namespace MedicalWebApplication.Services
             {
                 //call mydb.procedure_registration('Андрей', 'Козицкий','Сергеевич',1,'koneckonca', '123456',1 );
                 string sqlCommand = string.Format("call mydb.procedure_registration(\'{0}\',\'{1}\',\'{2}\',\'{3}\'," +
-                                                  "\'{4}\',\'{5}\',\'{6}\');",first_name,last_name,patronamic,activity,login,password,role);
+                                                  "\'{4}\',\'{5}\',\'{6}\');",first_name,last_name,patronamic,login,password,role,activity);
 
                 _connection.Open();
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -43,15 +40,14 @@ namespace MedicalWebApplication.Services
             {
                 
                 string sqlCommand = string.Format("call mydb.procedure_authoriztion(\'{0}\',\'{1}\');",login,password);
-
                 _connection.Open();
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
                 MySqlCommand command = new MySqlCommand(sqlCommand, _connection);
                 adapter.SelectCommand = command;
                 DataTable table = new DataTable();
                 adapter.Fill(table);
-                authorizedHuman = table.AsEnumerable().ToArray()[0].ItemArray[0].ToString();
-                Console.WriteLine();
+                AuthorizatedHuman.authorizatedHuman = table.AsEnumerable().ToArray()[0].ItemArray[0].ToString();;
+                
             }
         }
         

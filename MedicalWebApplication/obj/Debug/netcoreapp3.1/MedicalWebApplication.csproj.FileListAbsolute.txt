@@ -42,3 +42,5 @@
 /Users/boss/Documents/programming/6sem/SUBD/MedicalWebApplication/MedicalWebApplication/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
 /Users/boss/Documents/programming/6sem/SUBD/MedicalWebApplication/MedicalWebApplication/bin/Debug/netcoreapp3.1/System.Xml.XPath.XmlDocument.dll
 /Users/boss/Documents/programming/6sem/SUBD/MedicalWebApplication/MedicalWebApplication/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/boss/Documents/programming/6sem/SUBD/MedicalWebApplication/MedicalWebApplication/obj/Debug/netcoreapp3.1/Razor/Views/Human/Login.cshtml.g.cs
+/Users/boss/Documents/programming/6sem/SUBD/MedicalWebApplication/MedicalWebApplication/obj/Debug/netcoreapp3.1/Razor/Views/Human/Registration.cshtml.g.cs
