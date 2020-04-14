@@ -1,7 +1,7 @@
 DELIMITER // 
-    CREATE PROCEDURE mydb.proc_delete(IN log varchar(100))   
-    BEGIN
-    declare is_id int;
-    set is_id = (select mydb.human.id from mydb.human where mydb.human.login = log);
-    update mydb.human set mydb.human.active = 2 where mydb.human.id = is_id;
-END//
+         CREATE PROCEDURE mydb.proc_delete(IN log varchar(100))   
+         BEGIN
+         declare is_id int;
+         set is_id = (select mydb.human.id from mydb.human where mydb.human.login = log);
+         update mydb.human set mydb.human.active = 2 where mydb.human.id = is_id;
+     END//
